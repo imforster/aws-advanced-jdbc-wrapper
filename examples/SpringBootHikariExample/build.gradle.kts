@@ -6,7 +6,7 @@
  * You may obtain a copy of the License at
  *
  * http://www.apache.org/licenses/LICENSE-2.0
- *:eq
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -17,12 +17,23 @@
 plugins {
 	id("org.springframework.boot") version "2.7.0"
 	id("io.spring.dependency-management") version "1.1.7"
+	id("java")
+}
+
+group = "software.amazon"
+version = "0.0.1-SNAPSHOT"
+java.sourceCompatibility = JavaVersion.VERSION_1_8
+
+repositories {
+    mavenCentral()
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.postgresql:postgresql:42.7.5")
-    implementation(project(":aws-advanced-jdbc-wrapper"))
-
+	implementation("org.springframework.boot:spring-boot-starter-jdbc")
+	implementation("org.postgresql:postgresql:42.5.4")
+    implementation("software.amazon.awssdk:dsql:2.31.2")
+    implementation(files("/Users/forstaia/Developer/aws-advanced-jdbc-wrapper/wrapper/build/libs/aws-advanced-jdbc-wrapper-2.5.5.jar"))
+    implementation("software.amazon.awssdk:auth:2.31.2")
+    implementation("software.amazon.awssdk:sts:2.31.2")
 }

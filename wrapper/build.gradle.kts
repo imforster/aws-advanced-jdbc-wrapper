@@ -29,9 +29,10 @@ plugins {
 dependencies {
     implementation("org.checkerframework:checker-qual:3.49.2")
     compileOnly("org.apache.httpcomponents:httpclient:4.5.14")
-    compileOnly("software.amazon.awssdk:rds:2.31.12")
-    compileOnly("software.amazon.awssdk:auth:2.31.16") // Required for IAM (light implementation)
-    compileOnly("software.amazon.awssdk:http-client-spi:2.31.17") // Required for IAM (light implementation)
+    compileOnly("software.amazon.awssdk:rds:2.31.2")
+    compileOnly("software.amazon.awssdk:dsql:2.31.2")
+    compileOnly("software.amazon.awssdk:auth:2.30.37") // Required for IAM (light implementation)
+    compileOnly("software.amazon.awssdk:http-client-spi:2.30.32") // Required for IAM (light implementation)
     compileOnly("software.amazon.awssdk:sts:2.30.27")
     compileOnly("com.zaxxer:HikariCP:4.0.3") // Version 4.+ is compatible with Java 8
     compileOnly("com.mchange:c3p0:0.10.2")

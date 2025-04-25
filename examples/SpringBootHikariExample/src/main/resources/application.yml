@@ -1,13 +1,14 @@
 spring:
   datasource:
-    url: jdbc:aws-wrapper:postgresql://db-identifier.cluster-XYZ.us-east-2.rds.amazonaws.com:5432/postgres
-    username: username
+    url: jdbc:aws-wrapper:postgresql://vmabtvujyo2kb5sqpdn4saoenu.dsql-gamma.us-east-1.on.aws:5432/postgres
+    username: admin
     password: password
     driver-class-name: software.amazon.jdbc.Driver
     hikari:
       data-source-properties:
-        wrapperPlugins: failover,efm2
-        wrapperDialect: aurora-pg
+        wrapperPlugins: dsql
+        wrapperDialect: pg
+        iamRegion: us-east-1      # Add this line
       max-lifetime: 840000
       minimum-idle: 20
       maximum-pool-size: 20

@@ -4,9 +4,9 @@ In this tutorial, you will set up a Spring Boot application using Hikari and the
 
 > Note: this tutorial was written using the following technologies:
 >    - Spring Boot 2.7.0
->    - AWS JDBC Driver 2.5.5
->    - Postgresql 42.5.4
->    - Java 8
+>      - AWS JDBC Driver 2.5.5
+>      - Postgresql 42.5.4
+>      - Java 8
 
 
 ## Step 1: Create a Gradle Project
@@ -44,12 +44,12 @@ public class SpringBootHikariExampleApplication {
 ```
 You may also use the Spring Initializr to create the boilerplate code:
 1. Go to https://start.spring.io/
-2. Select the Maven project and version 2.7.9 of the Spring Boot.
-3. Select Java version 8.
-4. Click Dependencies and select the following:
-    - Spring Web
-    - Spring Data JDBC
-    - PostgreSQL Driver
+   2. Select the Maven project and version 2.7.9 of the Spring Boot.
+   3. Select Java version 8.
+   4. Click Dependencies and select the following:
+       - Spring Web
+       - Spring Data JDBC
+       - PostgreSQL Driver
 
 ## Step 2: Add the required Gradle Dependencies
 
